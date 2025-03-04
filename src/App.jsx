@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getFornecedores, setFornecedor, getFornecedoresPorConsumo } from "./services/fornecedorService";
+import { FornecedorComponent } from "./components/Fornecedor";
 import './styles/App.css';
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
   const [consumoMensal, setConsumoMensal] = useState("100");
 
   const novoFornecedor = {
-    nome: "Fornecedor Teste",
+    nome: "Fornecedor Teste 44",
     logo: "https://exemplo.com/logo.png",
     estado: "SP",
     custoPorKwh: 0.50,
@@ -59,6 +60,7 @@ function App() {
       <button onClick={() => cadastraFornecedor()}>Cadastrar</button>
       <h1>Clique aqui para buscar fornecedor por consumo</h1>
       <button onClick={() => buscaFornecedoresPorConsumo()}>Buscar fornecedor</button>
+      <FornecedorComponent/>
     </div>
   );
 }
