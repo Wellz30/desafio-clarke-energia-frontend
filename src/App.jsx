@@ -56,11 +56,36 @@ function App() {
 
   return (
     <div className="div-main">
-      <h1>Clique aqui para cadastrar um fornecedor</h1>
+      <div className="div-header">
+        <div className="div-max-width">
+          <img className="logo-image" src="https://clarke.com.br/assets/logo-clarke-energia-B3vZElX6.svg"></img>
+          <h1>Desafio Técnico</h1>
+        </div>
+      </div>
+      <div className="div-body">
+        <div className="div-max-width">
+          <div className="div-body-division"></div>
+          <div className="div-body-division-image"></div>
+        </div>
+      </div>
+      <div className="div-footer">
+        <div className="div-max-width">
+          
+        </div>
+      </div>
+      {/* <h1>Clique aqui para cadastrar um fornecedor</h1>
       <button onClick={() => cadastraFornecedor()}>Cadastrar</button>
       <h1>Clique aqui para buscar fornecedor por consumo</h1>
       <button onClick={() => buscaFornecedoresPorConsumo()}>Buscar fornecedor</button>
-      <FornecedorComponent/>
+      <FornecedorComponent
+        nome="Nome empresa"
+        logo="logo-exemplo"
+        estado="estado"
+        custoKw="0.5"
+        limite="100"
+        clientes="5000"
+        avaliacao="4.7"
+      /> */}
     </div>
   );
 }
