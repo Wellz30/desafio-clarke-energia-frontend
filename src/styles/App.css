@@ -24,6 +24,31 @@
   background: linear-gradient(135deg,#005931,#061d14);
 }
 
+.buttons-header{
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.button-header{
+  width: 120px;
+  height: 40px;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 10px;
+  color: white;
+  margin-left: 10px;
+  font-size: 0.6vw;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.button-header:hover{
+  background-color: #0fd47c;
+}
+
 .div-max-width{
   width: 1400px;
   height: 100%;
@@ -55,7 +80,30 @@
 .div-body-division{
   width: 50%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center ;
+  align-items: center;
 }
+
+.div-body-division-text{
+  width: 90%;
+  height: 50%;
+  clear: both;
+  font-size: 70px;
+  font-family: sans-serif;
+  color: #0fd47c;
+}
+
+.font-white{
+  color: white;
+}
+
+.div-body-division-subititle{
+  width: 90%;
+  height: 30%;
+}
+
 .div-body-division-image{
   width: 50%;
   height: 100%;

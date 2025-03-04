@@ -60,17 +60,24 @@ function App() {
         <div className="div-max-width">
           <img className="logo-image" src="https://clarke.com.br/assets/logo-clarke-energia-B3vZElX6.svg"></img>
           <h1>Desafio Técnico</h1>
+          <div className="buttons-header">
+            <button className="button-header">Simule agora</button>
+            <button className="button-header">Fornecedores</button>
+          </div>
         </div>
       </div>
       <div className="div-body">
-        <div className="div-max-width">
-          <div className="div-body-division"></div>
+        <div className="div-max-width" id="content">
+          <div className="div-body-division">
+            <div className="div-body-division-text"><span className="font-white">Sua empresa</span> eficiente <span className="font-white">no</span> mercado livre de energia</div>
+            <div className="div-body-division-subititle">Simule agora, e encontre o melhor fornecedor para sua demanda.</div>
+          </div>
           <div className="div-body-division-image"></div>
         </div>
       </div>
       <div className="div-footer">
         <div className="div-max-width">
-          
+
         </div>
       </div>
       {/* <h1>Clique aqui para cadastrar um fornecedor</h1>
