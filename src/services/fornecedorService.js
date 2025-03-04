@@ -19,3 +19,15 @@ export const setFornecedor = async (fornecedorData) => {
     throw error;
   }
 };
+
+export const getFornecedoresPorConsumo = async (consumoMensal) => {
+  try {
+    const response = await api.get(`/fornecedores-por-consumo`, {
+      params: { consumoMensal },
+    });
+    return response.data;
+  } catch (error) {
+    console.error("Erro ao buscar fornecedores por consumo:", error);
+    throw error;
+  }
+};
