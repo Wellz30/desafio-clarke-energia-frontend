@@ -40,7 +40,7 @@
   border-radius: 10px;
   color: white;
   margin-left: 10px;
-  font-size: 0.6vw;
+  font-size: 100%;
   font-weight: bolder;
   cursor: pointer;
 }
@@ -90,7 +90,7 @@
   width: 90%;
   height: 50%;
   clear: both;
-  font-size: 70px;
+  font-size: 400%;
   font-family: sans-serif;
   color: #0fd47c;
 }
