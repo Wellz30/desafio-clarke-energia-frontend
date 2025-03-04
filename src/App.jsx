@@ -17,8 +17,11 @@ function App() {
 
   useEffect(() => {
     fetchData();
-    console.log(fornecedores)
   }, []);
+
+  useEffect(() => {
+    console.log(fornecedores);
+  }, [fornecedores]);
 
   return (
     <div>
