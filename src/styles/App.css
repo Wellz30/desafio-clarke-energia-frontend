@@ -1,3 +1,10 @@
+:root {
+  --cor-primaria: #184a34;
+  --cor-secundaria: #0fd47c;
+  --cor-fonte-primaria: #ffffff;
+  --cor-fonte-secundaria: #000000;
+}
+
 .div-main{
   display: flex;
   flex-direction: column;
