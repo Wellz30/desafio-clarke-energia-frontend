@@ -69,7 +69,7 @@ function App() {
       <div className="div-body">
         <div className="div-max-width" id="content">
           <div className="div-body-division">
-            <div className="div-body-division-text"><span className="font-white">Sua empresa</span> eficiente <span className="font-white">no</span> mercado livre de energia</div>
+            <div className="div-body-division-text"><div><span className="font-white">Sua empresa</span> eficiente <span className="font-white">no</span> mercado livre de energia</div></div>
             <div className="div-body-division-subititle">Simule agora, e encontre o melhor fornecedor para sua demanda.</div>
           </div>
           <div className="div-body-division-image">

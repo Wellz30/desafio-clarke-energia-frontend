@@ -259,7 +259,11 @@
   }
 
   .div-body-division-text{
-    height: 200px;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 
   .div-modal {
