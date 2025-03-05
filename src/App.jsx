@@ -74,7 +74,11 @@ function App() {
           </div>
           <div className="div-body-division-image">
             <div className="div-modal">
-
+                <h1 className="font-black">Veja quais fornecedores podem te atender!</h1>
+                <p className="description-text-modal">Deixe nossos especialistas analisarem o consumo mensal da sua empresa e mostrar quais fornecedores mais combinam com você.</p>
+                <label className="label-text-modal">Informe seu consumo mensal (Kwh):</label>
+                <input className="input-consumo" type="number"></input>
+                <button className="button-consumo">Enviar</button>
             </div>
           </div>
         </div>

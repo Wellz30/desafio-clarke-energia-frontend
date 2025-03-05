@@ -1,10 +1,3 @@
-:root {
-  --cor-primaria: #184a34;
-  --cor-secundaria: #0fd47c;
-  --cor-fonte-primaria: #ffffff;
-  --cor-fonte-secundaria: #000000;
-}
-
 .div-main{
   width: 100%;
   height: 100vh;
@@ -92,7 +85,7 @@
 
 .div-body-division-text{
   width: 90%;
-  height: 50%;
+  height: 30%;
   clear: both;
   font-size: 300%;
   font-family: sans-serif;
@@ -101,6 +94,16 @@
 
 .font-white{
   color: white;
+}
+
+.font-black{
+  width: 70%;
+  color: black;
+  margin-top: 20%;
+  font-weight: bolder;
+  font-size: 150%;
+  height: 15%;
+  text-align: center;
 }
 
 .div-body-division-subititle{
@@ -125,6 +128,53 @@
   background-color: white;
   border: none;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.description-text-modal{
+  color: black;
+  width: 70%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.label-text-modal{
+  color: black;
+  width: 70%;
+  margin-top: 20%;
+  font-family: sans-serif;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.input-consumo{
+  width: 60%;
+  margin-top: 5%;
+  height: 5%;
+  border: 0.5px solid #0fd47c;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.button-consumo{
+  width: 60%;
+  margin-top: 5%;
+  height: 5%;
+  border: none;
+  background-color: #0fd47c;
+  color: white;
+  font-family: sans-serif;
+  font-weight: bolder;
+  font-size: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.button-consumo:hover{
+  background-color: #061d14;
 }
 
 .div-footer{
