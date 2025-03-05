@@ -15,7 +15,7 @@
     background: linear-gradient(135deg,#005931,#061d14);
     border-radius: 8px;
     border: 1px solid white;
-    width: 70%;
+    width: 1200px;
     height: 80vh;
     max-width: 80%;
     position: relative;
@@ -23,7 +23,6 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    cursor: pointer;
   }
 
   .modal-title{
