@@ -1,4 +1,4 @@
-.div-main{
+.div-main {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -7,21 +7,21 @@
   align-items: center;
 }
 
-.div-header{
+.div-header {
   width: 100%;
   height: 15%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg,#005931,#061d14);
+  background: linear-gradient(135deg, #005931, #061d14);
 }
 
-.title{
+.title {
   font-size: 200%;
 }
 
-.buttons-header{
+.buttons-header {
   width: 40%;
   display: flex;
   flex-direction: row;
@@ -29,7 +29,7 @@
   align-items: center;
 }
 
-.button-header{
+.button-header {
   width: 120px;
   height: 40px;
   background-color: transparent;
@@ -42,11 +42,11 @@
   cursor: pointer;
 }
 
-.button-header:hover{
+.button-header:hover {
   background-color: #0fd47c;
 }
 
-.div-max-width{
+.div-max-width {
   width: 1400px;
   height: 100%;
   display: flex;
@@ -59,31 +59,31 @@
   padding-right: 10%;
 }
 
-.logo-image{
+.logo-image {
   width: 10%;
   height: 100%;
 }
 
-.div-body{
+.div-body {
   width: 100%;
   height: 70%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin-top: 1px;
-  background: linear-gradient(135deg,#005931,#061d14);
+  background: linear-gradient(135deg, #005931, #061d14);
 }
 
-.div-body-division{
+.div-body-division {
   width: 50%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center ;
+  justify-content: center;
   align-items: center;
 }
 
-.div-body-division-text{
+.div-body-division-text {
   width: 90%;
   height: 50%;
   clear: both;
@@ -92,11 +92,11 @@
   color: #0fd47c;
 }
 
-.font-white{
+.font-white {
   color: white;
 }
 
-.font-black{
+.font-black {
   width: 70%;
   color: black;
   margin-top: 10%;
@@ -106,12 +106,12 @@
   text-align: center;
 }
 
-.div-body-division-subititle{
+.div-body-division-subititle {
   width: 90%;
   height: 30%;
 }
 
-.div-body-division-image{
+.div-body-division-image {
   width: 50%;
   height: 100%;
   display: flex;
@@ -122,7 +122,7 @@
   background-position: center;
 }
 
-.div-modal{
+.div-modal {
   width: 70%;
   height: 90%;
   background-color: white;
@@ -134,14 +134,14 @@
   align-items: center;
 }
 
-.description-text-modal{
+.description-text-modal {
   color: black;
   width: 70%;
   text-align: center;
   margin-top: 10px;
 }
 
-.label-text-modal{
+.label-text-modal {
   color: black;
   width: 70%;
   margin-top: 10%;
@@ -150,7 +150,7 @@
   text-align: center;
 }
 
-.input-consumo{
+.input-consumo {
   width: 60%;
   margin-top: 5%;
   height: 5%;
@@ -159,7 +159,7 @@
   text-align: center;
 }
 
-.button-consumo{
+.button-consumo {
   width: 40%;
   margin-top: 5%;
   height: 8%;
@@ -173,11 +173,11 @@
   cursor: pointer;
 }
 
-.button-consumo:hover{
+.button-consumo:hover {
   background-color: #061d14;
 }
 
-.mensage-error{
+.mensage-error {
   display: none;
   width: 80%;
   margin-top: 10px;
@@ -186,7 +186,7 @@
   color: red;
 }
 
-.div-not-found{
+.div-not-found {
   width: 80%;
   height: 30%;
   margin-top: 20%;
@@ -199,37 +199,47 @@
   text-align: center;
 }
 
-.div-footer{
+.div-footer {
   width: 100%;
   height: 15%;
   margin-top: 1px;
-  background: linear-gradient(135deg,#005931,#061d14);
+  background: linear-gradient(135deg, #005931, #061d14);
 }
 
 @media screen and (max-width: 768px) {
 
-  .div-main{
+  .div-main {
+    width: 100%;
+    min-height: 100vh;
     height: auto;
   }
 
-  .logo-image{
+  .logo-image {
     width: 80px;
     height: 80px;
     margin-top: 10px;
     margin-bottom: 10px;
   }
 
-  .div-max-width{
+  .div-max-width {
     flex-direction: column;
+    width: 100%;
+    max-width: 1400px;
     height: auto;
   }
 
-  .div-body-division{
+  .div-body-division {
     width: 100%;
-    height: 600px;
+    min-height: 350px;
+    height: auto;
   }
 
-  .div-body-division-subititle{
+  html, body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .div-body-division-subititle {
     height: 20%;
     display: flex;
     flex-direction: row;
@@ -237,16 +247,26 @@
     align-items: center;
   }
 
-  .buttons-header{
+  .buttons-header {
     margin-top: 10px;
     margin-bottom: 10px;
   }
 
-  .div-body-division-image{
+  .div-body-division-image {
+    width: 100%;
+    min-height: 400px;
+    height: auto;
+  }
+
+  .div-body-division-text{
+    height: 200px;
+  }
+
+  .div-modal {
     width: 100%;
   }
 
-  .div-modal{
-    width: 100%;
+  .div-footer{
+    height: 100px;
   }
 }
