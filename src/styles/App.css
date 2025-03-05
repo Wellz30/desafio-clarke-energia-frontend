@@ -205,3 +205,48 @@
   margin-top: 1px;
   background: linear-gradient(135deg,#005931,#061d14);
 }
+
+@media screen and (max-width: 768px) {
+
+  .div-main{
+    height: auto;
+  }
+
+  .logo-image{
+    width: 80px;
+    height: 80px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .div-max-width{
+    flex-direction: column;
+    height: auto;
+  }
+
+  .div-body-division{
+    width: 100%;
+    height: 600px;
+  }
+
+  .div-body-division-subititle{
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .buttons-header{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .div-body-division-image{
+    width: 100%;
+  }
+
+  .div-modal{
+    width: 100%;
+  }
+}
