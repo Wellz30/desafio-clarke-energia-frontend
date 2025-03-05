@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getFornecedores, setFornecedor, getFornecedoresPorConsumo } from "./services/fornecedorService";
+import { getFornecedores, getFornecedoresPorConsumo } from "./services/fornecedorService";
 import { Modal } from "./components/Modal";
 import './styles/App.css';
 
