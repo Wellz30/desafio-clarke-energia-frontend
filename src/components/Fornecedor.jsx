@@ -11,13 +11,13 @@ export function FornecedorComponent(props) {
         <div className='div-nome'>{props.nome}</div>
         <div className='div-more-details'>
           <div className='div-more-details-divisor'>
-            <div className='div-info'></div>
-            <div className='div-info'></div>
-            <div className='div-info'></div>
+            <div className='div-info'>{props.estado}</div>
+            <div className='div-info'>R$ {props.custoKw}/Kwh</div>
+            <div className='div-info'>Limite: {props.limite}</div>
           </div>
           <div className='div-more-details-divisor'>
-          <div className='div-info'></div>
-            <div className='div-info'></div>
+          <div className='div-info'>Nº Clientes: {props.clientes}</div>
+            <div className='div-info'><img src='/icons/star.svg'></img>{props.avaliacao}</div>
             <div className='div-info'></div>
           </div>
         </div>

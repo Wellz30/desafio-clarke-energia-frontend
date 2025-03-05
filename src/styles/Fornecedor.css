@@ -16,7 +16,6 @@
     justify-content: flex-start;
     align-items: center;
     text-align: center;
-    background-color: red;
 }
 
 .div-more-details{
@@ -26,7 +25,6 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: blue;
 }
 
 .div-more-details-divisor{
@@ -36,13 +34,19 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    background-color: yellow;
 }
 
 .div-info{
     width: 80%;
     height: 25%;
-    background-color: azure;
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-weight: bolder;
 }
 
 .div-logo{
@@ -59,14 +63,12 @@
 .div-nome{
     width: 100%;
     height: 20%;
-    font-family: sans-serif;
-    font-size: 120%;
-}
-
-.div-avaliacao{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     text-align: center;
+    font-family: sans-serif;
+    font-size: 120%;
+    border-bottom: 0.5px solid white;
 }
