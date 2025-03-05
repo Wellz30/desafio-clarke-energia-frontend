@@ -8,7 +8,10 @@ export function FornecedorComponent(props) {
         <img className='img-logo' src={props.logo}></img>
       </div>
       <div className='div-nome'>
-        {props.nome}
+        <div>{props.nome}</div>
+        <div>{props.avaliacao}</div>
+        <div><img src='/icons/star.svg'></img></div>
+        
       </div>
       {/* <h1>{props.nome}</h1>
       <h1>{props.logo}</h1>
