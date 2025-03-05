@@ -9,9 +9,10 @@ export function FornecedorComponent(props) {
       </div>
       <div className='div-nome'>
         <div>{props.nome}</div>
-        <div>{props.avaliacao}</div>
-        <div><img src='/icons/star.svg'></img></div>
-        
+        <div className='div-avaliacao'>
+          {props.avaliacao}
+          <img src='/icons/star.svg'></img>
+        </div>
       </div>
       {/* <h1>{props.nome}</h1>
       <h1>{props.logo}</h1>

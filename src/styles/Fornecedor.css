@@ -30,3 +30,11 @@
     font-family: sans-serif;
     font-size: 150%;
 }
+
+.div-avaliacao{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
