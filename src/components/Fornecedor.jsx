@@ -7,15 +7,22 @@ export function FornecedorComponent(props) {
       <div className='div-logo'>
         <img className='img-logo' src={props.logo}></img>
       </div>
-      <div className='div-nome'>
-        <div>{props.nome}</div>
-        <div className='div-avaliacao'>
-          {props.avaliacao}
-          <img src='/icons/star.svg'></img>
+      <div className='div-details'>
+        <div className='div-nome'>{props.nome}</div>
+        <div className='div-more-details'>
+          <div className='div-more-details-divisor'>
+            <div className='div-info'></div>
+            <div className='div-info'></div>
+            <div className='div-info'></div>
+          </div>
+          <div className='div-more-details-divisor'>
+          <div className='div-info'></div>
+            <div className='div-info'></div>
+            <div className='div-info'></div>
+          </div>
         </div>
       </div>
-      {/* <h1>{props.nome}</h1>
-      <h1>{props.logo}</h1>
+      {/*
       <h1>{props.estado}</h1>
       <h1>{props.custoKw}</h1>
       <h1>{props.limite}</h1>
