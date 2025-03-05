@@ -24,6 +24,10 @@
   background: linear-gradient(135deg,#005931,#061d14);
 }
 
+.title{
+  font-size: 200%;
+}
+
 .buttons-header{
   width: 40%;
   display: flex;
@@ -90,7 +94,7 @@
   width: 90%;
   height: 50%;
   clear: both;
-  font-size: 400%;
+  font-size: 300%;
   font-family: sans-serif;
   color: #0fd47c;
 }
@@ -107,9 +111,20 @@
 .div-body-division-image{
   width: 50%;
   height: 100%;
-  background-image: url('https://clarke.com.br/assets/raios%20full-Bro2RuJA.png');
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   background-size: cover;
   background-position: center;
+}
+
+.div-modal{
+  width: 70%;
+  height: 90%;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
 }
 
 .div-footer{

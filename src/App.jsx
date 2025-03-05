@@ -59,7 +59,7 @@ function App() {
       <div className="div-header">
         <div className="div-max-width">
           <img className="logo-image" src="https://clarke.com.br/assets/logo-clarke-energia-B3vZElX6.svg"></img>
-          <h1>Desafio Técnico</h1>
+          <h1 className="title">Desafio Técnico</h1>
           <div className="buttons-header">
             <button className="button-header">Simule agora</button>
             <button className="button-header">Fornecedores</button>
@@ -72,7 +72,11 @@ function App() {
             <div className="div-body-division-text"><span className="font-white">Sua empresa</span> eficiente <span className="font-white">no</span> mercado livre de energia</div>
             <div className="div-body-division-subititle">Simule agora, e encontre o melhor fornecedor para sua demanda.</div>
           </div>
-          <div className="div-body-division-image"></div>
+          <div className="div-body-division-image">
+            <div className="div-modal">
+
+            </div>
+          </div>
         </div>
       </div>
       <div className="div-footer">
