@@ -8,8 +8,8 @@ function App() {
   const [fornecedores, setFornecedores] = useState([]);
   const [consumoMensal, setConsumoMensal] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [titleModal, setTitleModal] = useState("Nossos Fornecedores")
 
-  const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
   const buscaFornecedores = async () => {
@@ -30,7 +30,9 @@ function App() {
       try {
         const data = await getFornecedoresPorConsumo(consumoMensal);
         setFornecedores(data);
-        console.log("Fornecedores encontrados:", data);
+        setTitleModal("Fornecedores encontrados")
+        setIsModalOpen(true)
+        setConsumoMensal("")
       } catch (error) {
         console.error("Erro ao buscar fornecedores por consumo.");
       }
@@ -41,8 +43,13 @@ function App() {
         mensage.style.display = "none"
       }, 2000);
     }
-
   };
+
+  const buscaTodosFornecedores = () => {
+    buscaFornecedores();
+    setTitleModal("Nossos Fornecedores");
+    setIsModalOpen(true)
+  }
 
   useEffect(() => {
     buscaFornecedores();
@@ -55,7 +62,7 @@ function App() {
           <img className="logo-image" src="https://clarke.com.br/assets/logo-clarke-energia-B3vZElX6.svg"></img>
           <h1 className="title">Desafio Técnico</h1>
           <div className="buttons-header">
-            <button className="button-header" onClick={openModal}>Fornecedores</button>
+            <button className="button-header" onClick={() => buscaTodosFornecedores()}>Fornecedores</button>
           </div>
         </div>
       </div>
@@ -85,22 +92,9 @@ function App() {
       <Modal
         isOpen={isModalOpen}
         closeModal={closeModal}
-        modalTitle={"Nossos Fornecedores"}
+        modalTitle={titleModal}
         Arrayfornecedores={fornecedores}
       />
-      {/* <h1>Clique aqui para cadastrar um fornecedor</h1>
-      <button onClick={() => cadastraFornecedor()}>Cadastrar</button>
-      <h1>Clique aqui para buscar fornecedor por consumo</h1>
-      <button onClick={() => buscaFornecedoresPorConsumo()}>Buscar fornecedor</button>
-      <FornecedorComponent
-        nome="Nome empresa"
-        logo="logo-exemplo"
-        estado="estado"
-        custoKw="0.5"
-        limite="100"
-        clientes="5000"
-        avaliacao="4.7"
-      /> */}
     </div>
   );
 }

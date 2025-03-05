@@ -5,7 +5,9 @@ import '../styles/Modal.css';
 export function Modal({ isOpen, closeModal, modalTitle, Arrayfornecedores }) {
   if (!isOpen) return null;
 
-  console.log("Fornecedores: ", Arrayfornecedores)
+  const quantidadeFornecedor = Arrayfornecedores.length;
+
+  console.log("Fornecedores: ", quantidadeFornecedor)
   return (
     <div className="modal-overlay" onClick={closeModal}>
       <div className="modal" onClick={(e) => e.stopPropagation()}>
@@ -13,7 +15,8 @@ export function Modal({ isOpen, closeModal, modalTitle, Arrayfornecedores }) {
           {modalTitle}
         </div>
         <div className='modal-fornecedores'>
-          {Arrayfornecedores.map((fornecedor) => (
+          {quantidadeFornecedor > 0 ?
+          Arrayfornecedores.map((fornecedor) => (
             <FornecedorComponent
               key={fornecedor.id}
               nome={fornecedor.nome}
@@ -24,7 +27,9 @@ export function Modal({ isOpen, closeModal, modalTitle, Arrayfornecedores }) {
               clientes={fornecedor.numeroClientes}
               avaliacao={fornecedor.avaliacaoMedia}
             />
-          ))}
+          ))
+        :
+        <div className='div-not-found'>Não encontramos fornecedores que atendam ao seu consumo.</div>}
         </div>
         <button className="close-button" onClick={closeModal}>X</button>
       </div>
