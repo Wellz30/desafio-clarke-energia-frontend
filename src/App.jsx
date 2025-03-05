@@ -1,12 +1,17 @@
 import { useEffect, useState } from "react";
 import { getFornecedores, setFornecedor, getFornecedoresPorConsumo } from "./services/fornecedorService";
 import { FornecedorComponent } from "./components/Fornecedor";
+import { Modal } from "./components/Modal";
 import './styles/App.css';
 
 function App() {
 
   const [fornecedores, setFornecedores] = useState([]);
   const [consumoMensal, setConsumoMensal] = useState("100");
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   const novoFornecedor = {
     nome: "Fornecedor Teste 44",
@@ -61,7 +66,7 @@ function App() {
           <img className="logo-image" src="https://clarke.com.br/assets/logo-clarke-energia-B3vZElX6.svg"></img>
           <h1 className="title">Desafio Técnico</h1>
           <div className="buttons-header">
-            <button className="button-header">Fornecedores</button>
+            <button className="button-header" onClick={openModal}>Fornecedores</button>
           </div>
         </div>
       </div>
@@ -87,6 +92,7 @@ function App() {
 
         </div>
       </div>
+      <Modal isOpen={isModalOpen} closeModal={closeModal}/>
       {/* <h1>Clique aqui para cadastrar um fornecedor</h1>
       <button onClick={() => cadastraFornecedor()}>Cadastrar</button>
       <h1>Clique aqui para buscar fornecedor por consumo</h1>

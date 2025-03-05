@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/Modal.css';
 
-function Modal({ isOpen, closeModal }) {
+export function Modal({ isOpen, closeModal }) {
   if (!isOpen) return null;  // Se o modal não estiver aberto, não renderiza nada
 
   return (
@@ -15,5 +15,3 @@ function Modal({ isOpen, closeModal }) {
     </div>
   );
 }
-
-export default Modal;
