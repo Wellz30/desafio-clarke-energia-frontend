@@ -95,6 +95,7 @@ function App() {
         isOpen={isModalOpen}
         closeModal={closeModal}
         modalTitle={"Nossos Fornecedores"}
+        Arrayfornecedores={fornecedores}
       />
       {/* <h1>Clique aqui para cadastrar um fornecedor</h1>
       <button onClick={() => cadastraFornecedor()}>Cadastrar</button>

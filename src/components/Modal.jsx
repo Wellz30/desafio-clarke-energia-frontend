@@ -2,9 +2,10 @@ import React from 'react';
 import { FornecedorComponent } from "./Fornecedor";
 import '../styles/Modal.css';
 
-export function Modal({ isOpen, closeModal, modalTitle, fornecedores }) {
+export function Modal({ isOpen, closeModal, modalTitle, Arrayfornecedores }) {
   if (!isOpen) return null;
 
+  console.log("Fornecedores: ", Arrayfornecedores)
   return (
     <div className="modal-overlay" onClick={closeModal}>
       <div className="modal" onClick={(e) => e.stopPropagation()}>
@@ -12,96 +13,18 @@ export function Modal({ isOpen, closeModal, modalTitle, fornecedores }) {
           {modalTitle}
         </div>
         <div className='modal-fornecedores'>
-          <FornecedorComponent
-            nome="Nome empresa"
-            logo="https://img.freepik.com/vetores-gratis/design-de-logotipo-de-energia_23-2150011932.jpg"
-            estado="estado"
-            custoKw="0.5"
-            limite="100"
-            clientes="5000"
-            avaliacao="4.7"
-          />
-          <FornecedorComponent
-            nome="Nome empresa"
-            logo="https://img.freepik.com/vetores-gratis/design-de-logotipo-de-energia_23-2150011932.jpg"
-            estado="estado"
-            custoKw="0.5"
-            limite="100"
-            clientes="5000"
-            avaliacao="4.7"
-          />
-          <FornecedorComponent
-            nome="Nome empresa"
-            logo="https://img.freepik.com/vetores-gratis/design-de-logotipo-de-energia_23-2150011932.jpg"
-            estado="estado"
-            custoKw="0.5"
-            limite="100"
-            clientes="5000"
-            avaliacao="4.7"
-          />
-          <FornecedorComponent
-            nome="Nome empresa"
-            logo="https://img.freepik.com/vetores-gratis/design-de-logotipo-de-energia_23-2150011932.jpg"
-            estado="estado"
-            custoKw="0.5"
-            limite="100"
-            clientes="5000"
-            avaliacao="4.7"
-          />
-          <FornecedorComponent
-            nome="Nome empresa"
-            logo="https://img.freepik.com/vetores-gratis/design-de-logotipo-de-energia_23-2150011932.jpg"
-            estado="estado"
-            custoKw="0.5"
-            limite="100"
-            clientes="5000"
-            avaliacao="4.7"
-          />
-          <FornecedorComponent
-            nome="Nome empresa"
-            logo="https://img.freepik.com/vetores-gratis/design-de-logotipo-de-energia_23-2150011932.jpg"
-            estado="estado"
-            custoKw="0.5"
-            limite="100"
-            clientes="5000"
-            avaliacao="4.7"
-          />
-          <FornecedorComponent
-            nome="Nome empresa"
-            logo="https://img.freepik.com/vetores-gratis/design-de-logotipo-de-energia_23-2150011932.jpg"
-            estado="estado"
-            custoKw="0.5"
-            limite="100"
-            clientes="5000"
-            avaliacao="4.7"
-          />
-          <FornecedorComponent
-            nome="Nome empresa"
-            logo="https://img.freepik.com/vetores-gratis/design-de-logotipo-de-energia_23-2150011932.jpg"
-            estado="estado"
-            custoKw="0.5"
-            limite="100"
-            clientes="5000"
-            avaliacao="4.7"
-          />
-          <FornecedorComponent
-            nome="Nome empresa"
-            logo="https://img.freepik.com/vetores-gratis/design-de-logotipo-de-energia_23-2150011932.jpg"
-            estado="estado"
-            custoKw="0.5"
-            limite="100"
-            clientes="5000"
-            avaliacao="4.7"
-          />
-          <FornecedorComponent
-            nome="Nome empresa"
-            logo="https://img.freepik.com/vetores-gratis/design-de-logotipo-de-energia_23-2150011932.jpg"
-            estado="estado"
-            custoKw="0.5"
-            limite="100"
-            clientes="5000"
-            avaliacao="4.7"
-          />
+          {Arrayfornecedores.map((fornecedor) => (
+            <FornecedorComponent
+              key={fornecedor.id}
+              nome={fornecedor.nome}
+              logo={fornecedor.logo}
+              estado={fornecedor.estado}
+              custoKw={fornecedor.custoPorKwh}
+              limite={fornecedor.limiteMinimoKwh}
+              clientes={fornecedor.numeroClientes}
+              avaliacao={fornecedor.avaliacaoMedia}
+            />
+          ))}
         </div>
         <button className="close-button" onClick={closeModal}>X</button>
       </div>
