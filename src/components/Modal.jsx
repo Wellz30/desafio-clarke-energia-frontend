@@ -6,8 +6,6 @@ export function Modal({ isOpen, closeModal, modalTitle, Arrayfornecedores }) {
   if (!isOpen) return null;
 
   const quantidadeFornecedor = Arrayfornecedores.length;
-
-  console.log("Fornecedores: ", quantidadeFornecedor)
   return (
     <div className="modal-overlay" onClick={closeModal}>
       <div className="modal" onClick={(e) => e.stopPropagation()}>

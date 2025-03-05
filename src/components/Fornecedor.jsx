@@ -18,7 +18,7 @@ export function FornecedorComponent(props) {
           <div className='div-more-details-divisor'>
           <div className='div-info'>Clientes: {props.clientes}</div>
             <div className='div-info'><img src='/icons/star.svg'></img>{props.avaliacao}</div>
-            <div className='div-info'></div>
+            <div className='div-info-button'>Selecionar</div>
           </div>
         </div>
       </div>
