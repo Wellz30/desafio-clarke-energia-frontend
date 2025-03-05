@@ -6,21 +6,11 @@ import './styles/App.css';
 function App() {
 
   const [fornecedores, setFornecedores] = useState([]);
-  const [consumoMensal, setConsumoMensal] = useState("100");
+  const [consumoMensal, setConsumoMensal] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
-
-  const novoFornecedor = {
-    nome: "Fornecedor Teste 44",
-    logo: "https://exemplo.com/logo.png",
-    estado: "SP",
-    custoPorKwh: 0.50,
-    limiteMinimoKwh: 100,
-    numeroClientes: 500,
-    avaliacaoMedia: 4.5,
-  };
 
   const buscaFornecedores = async () => {
     try {
@@ -31,32 +21,32 @@ function App() {
     }
   };
 
-  const cadastraFornecedor = async () => {
-    try {
-      const response = await setFornecedor(novoFornecedor);
-      console.log("Fornecedor cadastrado com sucesso:", response);
-    } catch (error) {
-      console.error("Erro ao cadastrar fornecedor");
-    }
-  };
+  const setValorConsumo = (event) => {
+    setConsumoMensal(event.target.value)
+  }
 
   const buscaFornecedoresPorConsumo = async () => {
-    try {
-      const data = await getFornecedoresPorConsumo(consumoMensal);
-      setFornecedores(data);
-      console.log("Fornecedores encontrados:", data);
-    } catch (error) {
-      console.error("Erro ao buscar fornecedores por consumo.");
+    if (consumoMensal > 0) {
+      try {
+        const data = await getFornecedoresPorConsumo(consumoMensal);
+        setFornecedores(data);
+        console.log("Fornecedores encontrados:", data);
+      } catch (error) {
+        console.error("Erro ao buscar fornecedores por consumo.");
+      }
+    }else{
+      const mensage = document.querySelector(".mensage-error");
+      mensage.style.display = "inline"
+      setTimeout(() => {
+        mensage.style.display = "none"
+      }, 2000);
     }
+
   };
 
   useEffect(() => {
     buscaFornecedores();
   }, []);
-
-  useEffect(() => {
-    console.log(fornecedores);
-  }, [fornecedores]);
 
   return (
     <div className="div-main">
@@ -80,8 +70,9 @@ function App() {
               <h1 className="font-black">Veja quais fornecedores podem te atender!</h1>
               <p className="description-text-modal">Deixe nossos especialistas analisarem o consumo mensal da sua empresa e mostrar quais fornecedores mais combinam com você.</p>
               <label className="label-text-modal">Informe seu consumo mensal (Kwh):</label>
-              <input className="input-consumo" type="number"></input>
-              <button className="button-consumo">Enviar</button>
+              <input value={consumoMensal} className="input-consumo" type="number" onChange={(e) => setValorConsumo(e)}></input>
+              <span className="mensage-error">O consumo mensal deve ser maior que zero</span>
+              <button className="button-consumo" onClick={() => buscaFornecedoresPorConsumo()}>Enviar</button>
             </div>
           </div>
         </div>

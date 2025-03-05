@@ -22,12 +22,6 @@ export function FornecedorComponent(props) {
           </div>
         </div>
       </div>
-      {/*
-      <h1>{props.estado}</h1>
-      <h1>{props.custoKw}</h1>
-      <h1>{props.limite}</h1>
-      <h1>{props.clientes}</h1>
-      <h1>{props.avaliacao}</h1> */}
     </div>
   );
 }
