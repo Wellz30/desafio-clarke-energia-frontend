@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { getFornecedores, setFornecedor, getFornecedoresPorConsumo } from "./services/fornecedorService";
-import { FornecedorComponent } from "./components/Fornecedor";
 import { Modal } from "./components/Modal";
 import './styles/App.css';
 
@@ -78,11 +77,11 @@ function App() {
           </div>
           <div className="div-body-division-image">
             <div className="div-modal">
-                <h1 className="font-black">Veja quais fornecedores podem te atender!</h1>
-                <p className="description-text-modal">Deixe nossos especialistas analisarem o consumo mensal da sua empresa e mostrar quais fornecedores mais combinam com você.</p>
-                <label className="label-text-modal">Informe seu consumo mensal (Kwh):</label>
-                <input className="input-consumo" type="number"></input>
-                <button className="button-consumo">Enviar</button>
+              <h1 className="font-black">Veja quais fornecedores podem te atender!</h1>
+              <p className="description-text-modal">Deixe nossos especialistas analisarem o consumo mensal da sua empresa e mostrar quais fornecedores mais combinam com você.</p>
+              <label className="label-text-modal">Informe seu consumo mensal (Kwh):</label>
+              <input className="input-consumo" type="number"></input>
+              <button className="button-consumo">Enviar</button>
             </div>
           </div>
         </div>
@@ -92,7 +91,11 @@ function App() {
 
         </div>
       </div>
-      <Modal isOpen={isModalOpen} closeModal={closeModal}/>
+      <Modal
+        isOpen={isModalOpen}
+        closeModal={closeModal}
+        modalTitle={"Nossos Fornecedores"}
+      />
       {/* <h1>Clique aqui para cadastrar um fornecedor</h1>
       <button onClick={() => cadastraFornecedor()}>Cadastrar</button>
       <h1>Clique aqui para buscar fornecedor por consumo</h1>
