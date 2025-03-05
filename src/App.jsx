@@ -61,7 +61,6 @@ function App() {
           <img className="logo-image" src="https://clarke.com.br/assets/logo-clarke-energia-B3vZElX6.svg"></img>
           <h1 className="title">Desafio Técnico</h1>
           <div className="buttons-header">
-            <button className="button-header">Simule agora</button>
             <button className="button-header">Fornecedores</button>
           </div>
         </div>
